@@ -22,6 +22,6 @@ export const sign = async (fname, lname, phone, address, email, password) => {
         email: email,
         password: password
     };
-    const res = await axios.post(`${baseurl}/sign`, data);
+    const res = await axios.post(`${baseUrl}/sign`, data);
     return res;
 }

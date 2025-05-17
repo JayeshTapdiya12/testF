@@ -17,7 +17,7 @@ const Login = () => {
 
     const send = async () => {
         if (email === null || password === null) {
-            <Alert severity="error">Please enter all the details.</Alert>;
+            alert("Please enter all the details.");
             console.log("enter ther details")
 
         } else {
@@ -29,7 +29,7 @@ const Login = () => {
                 navigate('/');
 
             } catch (error) {
-                <Alert severity="error">Login failed. Please try again.</Alert>;
+                alert("Login failed. Please try again.");
 
             }
         }
