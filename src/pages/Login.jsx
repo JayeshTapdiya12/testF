@@ -5,6 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import image from '../assets/image.png'
 
 import { login } from '../service/UserService';
+import Header from '../compoments/Header';
+import Footer from '../compoments/Footer';
 
 
 
@@ -40,7 +42,7 @@ const Login = () => {
     }
 
     return (
-        <>
+        <><Header />
             <div className="login-container">
                 <div className="login-left">
                     <img src={image} alt="Online Ecommerce website Shopping" className="login-image" style={{ borderRadius: "15vw" }} />
@@ -84,6 +86,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }

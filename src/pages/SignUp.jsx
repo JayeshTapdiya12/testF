@@ -7,6 +7,8 @@ import '../Style/sign.css';
 import { useNavigate } from 'react-router-dom';
 import { sign } from '../service/UserService'
 import image from '../assets/image.png';
+import Header from '../compoments/Header';
+import Footer from '../compoments/Footer';
 
 
 const SignUp = () => {
@@ -42,6 +44,7 @@ const SignUp = () => {
     }
 
     return (<>
+        <Header />
         <div className="signup-container">
             <div className="signup-left">
                 <img src={image} alt="Online Ecommmerece Shopping" className="signup-image" style={{ borderRadius: "15vw" }} />
@@ -111,6 +114,7 @@ const SignUp = () => {
                 </div>
             </div>
         </div>
+        <Footer />
     </>
     )
 }
