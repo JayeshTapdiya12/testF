@@ -8,6 +8,8 @@ import { styled } from '@mui/system';
 
 
 import { getById } from '../service/ProductService'
+import { addProduct } from '../service/CartService';
+import { addWish } from '../service/WishlistService';
 
 
 const AddToBagButton = styled(Button)({
@@ -76,6 +78,28 @@ const ProductPage = () => {
     }, [])
 
 
+    const token = localStorage.getItem('token')
+
+
+    const addW = async () => {
+        if (token) {
+            const res = await addWish(id);
+            console.log(token)
+            console.log(res);
+
+        } else {
+            alert("login first")
+        }
+    }
+    const addPro = async () => {
+        if (token) {
+            const res = await addProduct(id);
+            console.log(res);
+        } else {
+            alert("login first")
+        }
+    }
+
     return (
         <>
             <Header />
@@ -102,7 +126,23 @@ const ProductPage = () => {
                                         )}
                                     </Grid> */}
                                     <Grid item xs={6}>
-                                        <WishlistButton variant="contained">WISHLIST</WishlistButton>
+                                        <WishlistButton variant="contained" onClick={addW} >WISHLIST</WishlistButton>
+                                    </Grid>
+                                </Grid>
+                            </CardContent>
+                            <CardContent>
+                                <Grid container spacing={1}>
+                                    {/* <Grid item xs={6}>
+                                        {existb.name === listpro.name ? (
+                                            <Typography variant="body2">Already in Bag</Typography>
+                                        ) : (
+                                            <AddToBagButton variant="contained" onClick={adding}>
+                                                ADD TO BAG
+                                            </AddToBagButton>
+                                        )}
+                                    </Grid> */}
+                                    <Grid item xs={6}>
+                                        <WishlistButton variant="contained" onClick={addPro}>Cart</WishlistButton>
                                     </Grid>
                                 </Grid>
                             </CardContent>
