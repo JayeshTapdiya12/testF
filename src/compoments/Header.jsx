@@ -169,6 +169,7 @@ const Header = ({ cartn }) => {
     );
 
 
+
     return (
         <>
             <div className="" >
@@ -217,7 +218,7 @@ const Header = ({ cartn }) => {
                                     <span style={{ fontSize: "15px", marginTop: "10px" }}>Profile</span>
                                 </IconButton>
 
-                                <NavLink to={'/cart'} style={{ textDecoration: "none", color: "white" }}>
+                                <NavLink to={'/wishlist'} style={{ textDecoration: "none", color: "white" }}>
                                     <IconButton size="large" aria-label="show 4 new mails" color="inherit" style={{ display: "flex", flexDirection: "column" }}>
                                         <Badge badgeContent={cartn} color="error">
                                             <ShoppingBagIcon />
