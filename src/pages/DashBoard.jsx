@@ -6,6 +6,7 @@ import { getProducts } from '../service/ProductService'
 import { Link, useParams } from 'react-router-dom'
 import { Container, Grid, Card, CardMedia, CardContent, Typography, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import Cart from './Cart'
 const Price = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
@@ -44,6 +45,7 @@ const DashBoard = () => {
     return (
         <>
             <Header />
+            <Cart />
             <Container maxWidth="lg" sx={{ paddingTop: '2rem' }}>
                 <Grid container spacing={2} justifyContent="center">
                     {listpro.map((product) => (
