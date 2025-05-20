@@ -4,7 +4,7 @@ footer {
   /* background: linear-gradient(to right, #2c5364, #203a43, #0f2027); */
 }
 .sticky-footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   background-color: rgba(64, 218, 226, 0.489);
