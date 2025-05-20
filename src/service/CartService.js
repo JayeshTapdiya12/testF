@@ -2,8 +2,10 @@ import axios from "axios";
 
 const baseUrl = 'http://localhost:3000/api/v1/cart';
 
-const token = localStorage.getItem("token")
-const headers = { headers: { 'Authorization': 'bearer ' + token } }
+const token = localStorage.getItem('token')
+// const headers = { headers: { 'Authorization': 'bearer ' + token } }
+const headers = { headers: { 'Authorization': 'Bearer ' + token } }
+
 
 
 
@@ -19,11 +21,12 @@ export const getProduct = async (id) => {
 }
 
 export const addProduct = async (id) => {
-    const data = axios.get(`${baseUrl}/add/${id}`, headers)
-    return data
+    const data = axios.post(`${baseUrl}/add/${id}`, {}, headers);
+    console.log(data)
+    return data;
 }
 
 export const removeProduct = async (id) => {
-    const data = axios.delete(`${baseUrl}/remove/${id}`, headers)
+    const data = axios.delete(`${baseUrl}/remove/${id}`, {}, headers)
     return data
 }
