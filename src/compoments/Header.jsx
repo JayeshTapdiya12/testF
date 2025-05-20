@@ -22,7 +22,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 // import { getCart } from '../Service/CartService';
 
-
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -216,6 +216,18 @@ const Header = ({ cartn }) => {
                                     <AccountCircle />
                                     <span style={{ fontSize: "15px", marginTop: "10px" }}>Profile</span>
                                 </IconButton>
+
+                                <NavLink to={'/cart'} style={{ textDecoration: "none", color: "white" }}>
+                                    <IconButton size="large" aria-label="show 4 new mails" color="inherit" style={{ display: "flex", flexDirection: "column" }}>
+                                        <Badge badgeContent={cartn} color="error">
+                                            <ShoppingBagIcon />
+                                        </Badge>
+
+                                        <span style={{ fontSize: "15px", marginTop: "10px" }}>Wishlist</span>
+
+                                    </IconButton>
+                                </NavLink>
+
 
                                 <NavLink to={'/cart'} style={{ textDecoration: "none", color: "white" }}>
                                     <IconButton size="large" aria-label="show 4 new mails" color="inherit" style={{ display: "flex", flexDirection: "column" }}>
