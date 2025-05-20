@@ -3,6 +3,8 @@ import Login from '../pages/login'
 import SignUp from '../pages/SignUp'
 import DashBoard from '../pages/DashBoard'
 import ProductPage from '../pages/ProductPage'
+import Cart from '../pages/Cart'
+import Wishlist from '../pages/Wishlist'
 // import { AuthRoute } from './AuthRoute'
 
 const AppRouter = () => {
@@ -22,7 +24,8 @@ const AppRouter = () => {
                     {/* <Route path='/sign' element={<AuthRoute><SignUp /></AuthRoute>} /> */}
 
                     {/* cart */}
-
+                    <Route path='/cart/' element={<Cart />} />;
+                    <Route path='wishlist/' element={<Wishlist />} />
 
                 </Routes>
             </BrowserRouter>
